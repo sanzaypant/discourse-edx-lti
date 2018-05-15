@@ -121,7 +121,7 @@ module OmniAuth
       # Since the request is LTI-signed, this is secure, but Discourse will
       # parse it and discard the domain to be safe.
       def set_origin_url!(lti_custom_params)
-        origin_url = lti_custom_params['url']
+        origin_url = lti_custom_params['custom_next']
         return unless origin_url
 
         log :info, "set_origin_url: #{origin_url}"
